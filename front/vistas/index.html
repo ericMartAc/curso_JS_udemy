@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio Formulario</title>
     <link rel="stylesheet" href="../publicos/estilos/estilos.css">
+    <script type="text/javascript">
+        const usuariosList = [
+            'Eric',
+            'Juan',
+            'Moisés'
+        ]
+    </script>
 </head>
 
-<body onload="bienvenido()">
-    <h3 id="sesionUsu" ></h3>
+<body onload="bienvenido(usuariosList)">
+    <h3 id="sesionUsu"></h3>
     <form name="form">
         <input type="hidden" name="oculto" value="valorOculto">
         <table width="200" id="unaColumna">
@@ -52,8 +59,8 @@
                     Género
                 </td>
                 <td>
-                    Masculino <input type="radio" id="genero" value="M"> 
-                    &nbsp;&nbsp;&nbsp; 
+                    Masculino <input type="radio" id="genero" value="M">
+                    &nbsp;&nbsp;&nbsp;
                     Femenino <input type="radio" id="genero" value="F">
                 </td>
             </tr>
@@ -105,7 +112,7 @@
         consectetur error magni ullam, quas sit quidem porro voluptatum nobis ipsam sapiente molestiae eligendi <br>
         dolorum eius.</p>
 
-<script type="text/javascript" src="../contoladores/ctrl.index.js"></script>
+    <script type="text/javascript" src="../contoladores/ctrl.index.js"></script>
 </body>
 
 </html>

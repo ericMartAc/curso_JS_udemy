@@ -1,11 +1,20 @@
 
 //validaciones de formulario
-function bienvenido() {
+function bienvenido(usuariosList) {
     let usuario = prompt('ingrese un usuario');
     if (esVacio(usuario)) {
-        document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso intruso')
+        document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso, es usted un intruso')
     } else {
-        document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso '+usuario)
+        if (usuario !== usuariosList[0] && usuario !== usuariosList[1] && usuario !== usuariosList[2]) {
+            document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso ' + 'eres un hacker de mierda')
+        } else {
+            for (let index = 0; index < usuariosList.length; index++) {
+                if (usuario === usuariosList[index]) {
+                    document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso ' + usuariosList[index])
+                }
+            }
+        }
+
     }
 }
 
