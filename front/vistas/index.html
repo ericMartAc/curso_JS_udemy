@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form name="form" method="POST" action="/recursoDeServidor">
+    <form name="form">
         <input type="hidden" name="oculto" value="valorOculto">
         <table width="200" id="unaColumna">
             <caption>
@@ -21,7 +21,7 @@
                     Ususario:
                 </td>
                 <td>
-                    <input name="usuario" placeholder="escribir usuario" type="text" class="default">
+                    <input id="usuario" placeholder="escribir usuario" type="text" class="default">
                 </td>
             </tr>
             <tr>
@@ -30,7 +30,7 @@
                     Password:
                 </td>
                 <td>
-                    <input name="psw" placeholder="ingrese su contraseña" type="password" class="default">
+                    <input id="psw" placeholder="ingrese su contraseña" type="password" class="default">
                 </td>
             </tr>
             <!--DATOs-->
@@ -39,7 +39,11 @@
                     Tecnología de interés
                 </td>
                 <td>
-                    JAVA <input type="checkbox" name="tecno" value="java"> &nbsp;&nbsp;&nbsp; .NET <input type="checkbox" name="tecno" value="net"> &nbsp;&nbsp;&nbsp; PHP <input type="checkbox" name="tecno" value="php">
+                    JAVA <input type="checkbox" id="tecno" value="java">
+                    &nbsp;&nbsp;&nbsp;
+                    .NET <input type="checkbox" id="tecno" value="net">
+                    &nbsp;&nbsp;&nbsp;
+                    PHP <input type="checkbox" id="tecno" value="php">
                 </td>
             </tr>
             <tr>
@@ -47,7 +51,9 @@
                     Género
                 </td>
                 <td>
-                    Masculino <input type="radio" name="genero" value="M"> &nbsp;&nbsp;&nbsp; Femenino <input type="radio" name="genero" value="F">
+                    Masculino <input type="radio" id="genero" value="M"> 
+                    &nbsp;&nbsp;&nbsp; 
+                    Femenino <input type="radio" id="genero" value="F">
                 </td>
             </tr>
             <tr>
@@ -55,7 +61,7 @@
                     Ocupación
                 </td>
                 <td>
-                    <select name="ocupacion" class="default">
+                    <select id="ocupacion" class="default">
                         <option value="1">Profesor</option>
                         <option value="2">Jubilado</option>
                         <option value="3">Ingeniero</option>
@@ -68,7 +74,7 @@
                     Música favoríta
                 </td>
                 <td>
-                    <select name="musica" multiple class="default">
+                    <select id="musica" multiple class="default">
                         <option value="rock">rock</option>
                         <option value="salsa">salsa</option>
                         <option value="vallenato">vallenato</option>
@@ -81,19 +87,24 @@
                     Comentarios
                 </td>
                 <td>
-                    <textarea class="default" name="comentarios" cols="30" rows="2"></textarea>
+                    <textarea class="default" id="comentarios" cols="30" rows="2"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="reset" value="Limpiar" class="default">
+                    <input type="button" onclick="reset_campos()" value="Limpiar" class="default">
                 </td>
                 <td>
-                    <input type="submit" value="Enviar" class="default">
+                    <input type="button" onclick="enviar_datos()" value="Enviar" class="default">
                 </td>
             </tr>
         </table>
     </form>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore itaque vero repellendus, perferendis totam <br>
+        consectetur error magni ullam, quas sit quidem porro voluptatum nobis ipsam sapiente molestiae eligendi <br>
+        dolorum eius.</p>
+
+<script type="text/javascript" src="../contoladores/ctrl.index.js"></script>
 </body>
 
 </html>
