@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formulario</title>
+    <link rel="stylesheet" href="../publicos/estilos/estilos.css">
+</head>
+
+<body>
+    <form name="form" method="POST" action="/recursoDeServidor">
+        <input type="hidden" name="oculto" value="valorOculto">
+        <table width="200" id="unaColumna">
+            <caption>
+                Titulo de formulario
+            </caption>
+            <tr>
+                <!--RECOGER DATOS USUARIO-->
+                <td class="oce-frist">
+                    Ususario:
+                </td>
+                <td>
+                    <input name="usuario" placeholder="escribir usuario" type="text" class="default">
+                </td>
+            </tr>
+            <tr>
+                <!--RECOGER PSW-->
+                <td class="oce-frist">
+                    Password:
+                </td>
+                <td>
+                    <input name="psw" placeholder="ingrese su contraseña" type="password" class="default">
+                </td>
+            </tr>
+            <!--DATOs-->
+            <tr>
+                <td class="oce-frist">
+                    Tecnología de interés
+                </td>
+                <td>
+                    JAVA <input type="checkbox" name="tecno" value="java"> &nbsp;&nbsp;&nbsp; .NET <input type="checkbox" name="tecno" value="net"> &nbsp;&nbsp;&nbsp; PHP <input type="checkbox" name="tecno" value="php">
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-frist">
+                    Género
+                </td>
+                <td>
+                    Masculino <input type="radio" name="genero" value="M"> &nbsp;&nbsp;&nbsp; Femenino <input type="radio" name="genero" value="F">
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-frist">
+                    Ocupación
+                </td>
+                <td>
+                    <select name="ocupacion" class="default">
+                        <option value="1">Profesor</option>
+                        <option value="2">Jubilado</option>
+                        <option value="3">Ingeniero</option>
+                        <option value="4" selected>Otro</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-frist">
+                    Música favoríta
+                </td>
+                <td>
+                    <select name="musica" multiple class="default">
+                        <option value="rock">rock</option>
+                        <option value="salsa">salsa</option>
+                        <option value="vallenato">vallenato</option>
+                        <option value="pop">pop</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-frist">
+                    Comentarios
+                </td>
+                <td>
+                    <textarea class="default" name="comentarios" cols="30" rows="2"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" value="Limpiar" class="default">
+                </td>
+                <td>
+                    <input type="submit" value="Enviar" class="default">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

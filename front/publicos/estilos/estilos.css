@@ -1,0 +1,45 @@
+body,
+.default {
+    line-height: 1.6em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #669;
+}
+
+#unaColumna {
+    margin: 45px;
+    /*Ancho de la tabla*/
+    width: 480px;
+    text-align: left;
+    /*eliminar espacios entre renglones y columnas*/
+    border-collapse: collapse;
+}
+
+#unaColumna caption {
+    font-size: 20px;
+}
+
+#unaColumna th {
+    font-size: 14px;
+    font-weight: normal;
+    /*superior inferior*/
+    padding: 12px 15px;
+    color: #039;
+}
+
+#unaColumna td {
+    padding: 10px 15px;
+    color: #669;
+    border-top: 1px solid #e8edff;
+}
+
+.oce-frist {
+    background: #d0dafd;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+#unaColumna tr:hover td {
+    color: #339;
+    background: #eff2ff;
+}
