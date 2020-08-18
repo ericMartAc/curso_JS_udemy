@@ -1,14 +1,14 @@
-// DOM
-const usu = document.getElementById("usuario");
-const psw = document.getElementById("psw");
-const tecno = document.getElementById("tecno");
-const gen = document.getElementById('genero');
-const ocu = document.getElementById('ocupacion');
-const music = document.getElementById('musica');
-const com = document.getElementById('comentarios');
-
 
 //validaciones de formulario
+function bienvenido() {
+    let usuario = prompt('ingrese un usuario');
+    if (esVacio(usuario)) {
+        document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso intruso')
+    } else {
+        document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso '+usuario)
+    }
+}
+
 function reset_campos() {
     document.getElementById("usuario").innerHTML = ('');
     document.getElementById("psw").innerHTML = ('');
@@ -21,10 +21,17 @@ function reset_campos() {
 
 function enviar_datos() {
     let datos = [];
+    let usu = document.getElementById("usuario");
+    let psw = document.getElementById("psw");
+    let tecno = document.getElementById("tecno");
+    let gen = document.getElementById('genero');
+    let ocu = document.getElementById('ocupacion');
+    let music = document.getElementById('musica');
+    let com = document.getElementById('comentarios');
 
-    if (esVacio(usu.value)) {
-        console.log('debe ingresar un valor de usuario: ', usu.value)
-
+    if (esVacio(usu.value) || esVacio(psw) ||
+        esVacio(tecno) || esVacio(gen)) {
+        alert('debe ingresar todos los valores')
     } else {
         console.log('continuar: ', usu.value)
     }

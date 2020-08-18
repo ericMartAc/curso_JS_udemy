@@ -1,9 +1,17 @@
-body,
-.default {
+body, .default {
     line-height: 1.6em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 12px;
     color: #669;
+}
+
+#sesionUsu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #77a;
+    text-align: center;
+    color: #fff;
 }
 
 #unaColumna {
