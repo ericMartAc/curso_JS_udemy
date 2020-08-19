@@ -14,10 +14,25 @@ body, .default {
     color: #fff;
 }
 
+.pagina {
+    width: 100%;
+    float: left;
+}
+
+section {
+    width: 65%;
+    float: left;
+}
+
+article {
+    width: 35%;
+    background-color: #2a8;
+    float: left;
+}
+
 #unaColumna {
     margin: 45px;
     /*Ancho de la tabla*/
-    width: 480px;
     text-align: left;
     /*eliminar espacios entre renglones y columnas*/
     border-collapse: collapse;

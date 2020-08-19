@@ -1,6 +1,7 @@
 
 //validaciones de formulario
 function bienvenido(usuariosList) {
+    document.getElementById('musica').selectedIndex = 0; //controlar el select
     let usuario = prompt('ingrese un usuario');
     if (esVacio(usuario)) {
         document.getElementById('sesionUsu').innerHTML = ('Bienvenido al curso, es usted un intruso')
@@ -43,9 +44,9 @@ function enviar_datos() {
         alert('debe ingresar todos los valores')
     } else {
         console.log('continuar: ', usu.value)
+        confirm('desea enviar los datos al servidor?')
     }
 }
-
 
 //FUNCIONES PÚBLICAS
 
